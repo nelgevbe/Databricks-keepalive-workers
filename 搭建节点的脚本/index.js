@@ -271,7 +271,7 @@ async function downloadFilesAndRun() {
   // 检测哪吒是否开启TLS
   const port = NEZHA_SERVER.includes(':') ? NEZHA_SERVER.split(':').pop() : '';
   const tlsPorts = new Set(['443', '8443', '2096', '2087', '2083', '2053']);
-  const nezhatls = tlsPorts.has(port) ? 'tls' : 'false';
+  const nezhatls = tlsPorts.has(port) ? 'true' : 'false';
 
   //运行ne-zha
   if (NEZHA_SERVER && NEZHA_KEY) {
